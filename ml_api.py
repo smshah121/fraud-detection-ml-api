@@ -6,7 +6,7 @@ app = FastAPI()
 
 print("Loading trained ML model...")
 
-# Load trained model
+
 model = joblib.load("fraud_model.pkl")
 
 print("Model loaded successfully")

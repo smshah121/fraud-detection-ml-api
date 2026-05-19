@@ -6,8 +6,7 @@ import joblib
 
 print("Loading dataset...")
 
-# Load dataset
-# Make sure creditcard.csv exists in same folder
+
 
 
 
@@ -15,7 +14,7 @@ df = pd.read_csv("creditcard.csv")
 
 print("Dataset loaded successfully")
 
-# Features and target
+
 X = df.drop("Class", axis=1)
 y = df["Class"]
 
@@ -31,13 +30,13 @@ X_train, X_test, y_train, y_test = train_test_split(
 print("Training model...")
 
 
-# Logistic Regression Model
+
 model = LogisticRegression(max_iter=1000)
 model.fit(X_train, y_train)
 
 print("Model trained successfully")
 
-# Predictions
+
 predictions = model.predict(X_test)
 
 print("\nClassification Report:\n")
