@@ -1,6 +1,8 @@
-from fastapi import FastAPI, Path
+from fastapi import FastAPI
 import joblib
 import numpy as np
+
+from pathlib import Path
 
 app = FastAPI()
 
