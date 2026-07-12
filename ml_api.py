@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Path
 import joblib
 import numpy as np
 
@@ -7,7 +7,11 @@ app = FastAPI()
 print("Loading trained ML model...")
 
 
-model = joblib.load("fraud_model.pkl")
+BASE_DIR = Path(__file__).resolve().parent
+
+MODEL_PATH = BASE_DIR / "fraud_model.pkl"
+
+model = joblib.load(MODEL_PATH)
 
 print("Model loaded successfully")
 
